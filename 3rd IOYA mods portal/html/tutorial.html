@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IOYA SMP — Tutorial</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        /* TUTORIAL PAGE */
+
+        .tutorial-page {
+            padding: 70px 8%;
+        }
+
+        .tutorial-heading {
+            max-width: 850px;
+            margin-bottom: 60px;
+        }
+
+        .tutorial-heading .section-number {
+            margin-bottom: 20px;
+        }
+
+        .tutorial-heading h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .tutorial-heading h1 span {
+            color: var(--lime);
+        }
+
+        .tutorial-heading p {
+            color: var(--muted);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .tutorial-video {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            min-height: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .tutorial-video .play-button {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--lime);
+            color: #11120E;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .tutorial-video p {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .tutorial-video span {
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .steps-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .steps-title {
+            margin-bottom: 35px;
+        }
+
+        .steps-title h2 {
+            font-size: 2.5rem;
+            margin-top: 15px;
+        }
+
+        .tutorial-step {
+            display: grid;
+            grid-template-columns: 75px 1fr;
+            gap: 25px;
+            padding: 35px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step-number {
+            color: var(--lime);
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .step-content ul {
+            color: var(--muted);
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        .tutorial-note {
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 3px solid var(--lime);
+            background: var(--surface-light);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .tutorial-note p {
+            margin: 0;
+        }
+
+        .tutorial-note strong {
+            color: var(--text);
+        }
+
+        .tutorial-download {
+            margin-top: 60px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--surface);
+            text-align: center;
+        }
+
+        .tutorial-download h2 {
+            margin-bottom: 15px;
+        }
+
+        .tutorial-download p {
+            color: var(--muted);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .tutorial-download .primary-button {
+            display: inline-block;
+        }
+
+        @media (max-width: 700px) {
+
+            .tutorial-page {
+                padding: 50px 6%;
+            }
+
+            .tutorial-step {
+                grid-template-columns: 45px 1fr;
+                gap: 15px;
+            }
+
+            .tutorial-video {
+                min-height: 220px;
+                padding: 25px;
+            }
+
+            .steps-title h2 {
+                font-size: 2rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            IOYA <span>SMP</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="#steps" class="nav-cta">Setup guide ↗</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="tutorial-page">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="tutorial-heading">
+
+            <div class="hero-tag">
+                <span class="status-dot"></span>
+                IOYA SMP INSTALLATION GUIDE
+            </div>
+
+            <h1>
+                One setup.<br>
+                <span>Zero confusion.</span>
+            </h1>
+
+            <p>
+                Everything you need to get Minecraft ready
+                and join IOYA SMP. Follow the steps in order.
+                You'll be playing with the gang soon.
+            </p>
+
+        </section>
+
+
+        <!-- VIDEO -->
+
+        <section class="tutorial-video">
+
+            <div class="play-button">▷</div>
+
+            <p>INSTALLATION WALKTHROUGH</p>
+
+            <span>VIDEO COMING SOON</span>
+
+        </section>
+
+
+        <!-- STEPS -->
+
+        <section class="steps-container" id="steps">
+
+
+            <div class="steps-title">
+
+                <div class="section-number">
+                    THE PROCESS · 01—05
+                </div>
+
+                <h2>Follow the steps.</h2>
+
+            </div>
+
+
+            <!-- STEP 01 -->
+
+            <div class="tutorial-step">
+
+                <div class="step-number">01</div>
+
+                <div class="step-content">
+
+                    <h3>Get the required files</h3>
+
+                    <p>
+                        Start by downloading the IOYA SMP modpack
+                        and the required installation files.
+                    </p>
+
+                    <ul>
+                        <li>Download the IOYA SMP modpack.</li>
+                        <li>Download any additional required files listed on the Downloads page.</li>
+                        <li>Keep the files somewhere easy to find, like your Downloads folder.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 02 -->
+
+            <div class="tutorial-step">
+
+                <div class="step-number">02</div>
+
+                <div class="step-content">
+
+                    <h3>Prepare your Minecraft launcher</h3>
+
+                    <p>
+                        Open your Minecraft launcher and make sure
+                        you're using the Minecraft version required
+                        by IOYA SMP.
+                    </p>
+
+                    <ul>
+                        <li>Launch your Minecraft launcher.</li>
+                        <li>Check your Minecraft version.</li>
+                        <li>Make sure it matches the version mentioned on the Downloads page.</li>
+                    </ul>
+
+                    <div class="tutorial-note">
+
+                        <p>
+                            <strong>Important:</strong>
+                            Minecraft versions matter. Different versions
+                            may not be compatible with the same mods or server.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 03 -->
+
+            <div class="tutorial-step">
+
+                <div class="step-number">03</div>
+
+                <div class="step-content">
+
+                    <h3>Install Fabric</h3>
+
+                    <p>
+                        IOYA SMP uses Fabric mods. You need the
+                        correct Fabric Loader installed for your
+                        Minecraft version.
+                    </p>
+
+                    <ul>
+                        <li>Open the Fabric installer.</li>
+                        <li>Select the correct Minecraft version.</li>
+                        <li>Keep the installation settings correct.</li>
+                        <li>Install the Fabric profile.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 04 -->
+
+            <div class="tutorial-step">
+
+                <div class="step-number">04</div>
+
+                <div class="step-content">
+
+                    <h3>Install the mods</h3>
+
+                    <p>
+                        Place the required mod files inside
+                        your Minecraft mods folder.
+                    </p>
+
+                    <ul>
+                        <li>Open your Minecraft game directory.</li>
+                        <li>Find the <strong>mods</strong> folder.</li>
+                        <li>If it doesn't exist, create a folder named <strong>mods</strong>.</li>
+                        <li>Move the downloaded mod files into it.</li>
+                    </ul>
+
+                    <div class="tutorial-note">
+
+                        <p>
+                            <strong>Don't unzip individual mod JAR files.</strong>
+                            Mods usually need to remain as .jar files
+                            inside the mods folder.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 05 -->
+
+            <div class="tutorial-step">
+
+                <div class="step-number">05</div>
+
+                <div class="step-content">
+
+                    <h3>Launch & join IOYA SMP</h3>
+
+                    <p>
+                        You're almost done. Start Minecraft using
+                        your Fabric installation.
+                    </p>
+
+                    <ul>
+                        <li>Select your Fabric profile.</li>
+                        <li>Launch the game.</li>
+                        <li>Open Multiplayer.</li>
+                        <li>Add the IOYA SMP server using the server address provided by Shin.</li>
+                        <li>Join and start playing.</li>
+                    </ul>
+
+                    <div class="tutorial-note">
+
+                        <p>
+                            <strong>You're in.</strong>
+                            Welcome to IOYA SMP.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- DOWNLOAD CTA -->
+
+        <section class="tutorial-download">
+
+            <h2>Missing some files?</h2>
+
+            <p>
+                Head back to the Downloads page to get the
+                required modpack and installation files.
+            </p>
+
+            <a href="downloads.html" class="primary-button">
+                Go to downloads ↗
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            IOYA <span>SMP</span>
+        </div>
+
+        <p>Built for the gang. By Shin.</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
