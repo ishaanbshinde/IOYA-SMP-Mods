@@ -1461,3 +1461,488 @@ video {
     }
 
 }
+
+
+
+/* =========================================================
+   HOMEPAGE MODS SECTION — CURRENT HTML
+========================================================= */
+
+.section {
+    padding: 110px 7% 80px;
+}
+
+.mods-section {
+    position: relative;
+}
+
+.section-header {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+    overflow-wrap: break-word;
+}
+
+.section-header h2 span {
+    color: var(--lime);
+}
+
+.section-header p {
+    max-width: 550px;
+    color: var(--muted);
+    margin-top: 25px;
+}
+
+
+/* FEATURE CARD */
+
+.mod-feature {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 35px;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(183,255,0,0.06),
+            transparent 55%
+        ),
+        var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    overflow: hidden;
+}
+
+
+/* MOD INFORMATION */
+
+.mod-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.mod-label {
+    color: var(--lime);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.mod-info h3 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.mod-info p {
+    max-width: 450px;
+    color: var(--muted);
+}
+
+.mod-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.mod-meta span {
+    padding: 7px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface-light);
+
+    color: var(--muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* FILE / DOWNLOAD AREA */
+
+.mod-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 30px;
+
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.file-symbol {
+    color: var(--lime);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.mod-actions > span:first-of-type {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.mod-actions > span:nth-of-type(2) {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 18px;
+
+    background: var(--lime);
+    color: #11120E;
+
+    border-radius: 9px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.download-button:hover {
+    background: var(--lemon);
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px var(--lime-glow);
+}
+
+.mod-actions small {
+    color: var(--muted);
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+}
+
+
+/* BOTTOM NOTE */
+
+.mods-bottom-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 30px;
+    padding: 22px 25px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.mods-bottom-note p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.mods-bottom-note a {
+    color: var(--lime);
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.mods-bottom-note a:hover {
+    color: var(--lemon);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .mod-feature {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mod-actions {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 75px 5% 45px;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(2.7rem, 11vw, 3.6rem);
+        letter-spacing: -3px;
+        line-height: 1.02;
+    }
+
+    .section-header p {
+        font-size: 0.92rem;
+        margin-top: 20px;
+    }
+
+    .mod-feature {
+        padding: 22px;
+        gap: 22px;
+        border-radius: 16px;
+    }
+
+    .mod-info h3 {
+        font-size: 2.3rem;
+    }
+
+    .mod-actions {
+        padding: 20px;
+    }
+
+    .mods-bottom-note {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .mods-bottom-note a {
+        font-size: 0.82rem;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .mod-feature {
+        padding: 17px;
+    }
+
+    .mod-actions {
+        padding: 17px;
+    }
+
+}
+
+/* =========================================================
+   HOMEPAGE — INSTALLATION GUIDE CARD
+========================================================= */
+
+.tutorial-guide-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 0;
+    min-height: 320px;
+    height: 100%;
+
+    padding: 28px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(183,255,0,0.12),
+            transparent 45%
+        ),
+        var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    transition: var(--transition);
+}
+
+
+/* TOP */
+
+.guide-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.guide-label {
+    color: var(--lime);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.guide-arrow {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    color: var(--text);
+    font-size: 1.1rem;
+
+    transition: var(--transition);
+}
+
+
+/* CENTER CONTENT */
+
+.guide-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin: 35px 0;
+}
+
+.guide-icon {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--lime);
+    color: var(--bg);
+
+    border-radius: 16px;
+
+    font-size: 1.7rem;
+    font-weight: 900;
+
+    box-shadow: 0 0 30px var(--lime-glow);
+}
+
+.guide-card-content h3 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.guide-card-content p {
+    max-width: 380px;
+
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* BOTTOM */
+
+.guide-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+.guide-card-bottom > span:first-child {
+    color: var(--muted);
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+}
+
+.guide-open {
+    color: var(--lime);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+
+/* HOVER */
+
+.tutorial-guide-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(183,255,0,0.4);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.2),
+        0 0 25px var(--lime-glow);
+}
+
+.tutorial-guide-card:hover .guide-arrow {
+    background: var(--lime);
+    color: var(--bg);
+    border-color: var(--lime);
+    transform: rotate(45deg);
+}
+
+.tutorial-guide-card:hover .guide-open {
+    color: var(--lemon);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .tutorial-guide-card {
+        min-height: 270px;
+        padding: 22px;
+        border-radius: 16px;
+    }
+
+    .guide-card-content {
+        margin: 25px 0;
+    }
+
+    .guide-card-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .guide-card-content p {
+        font-size: 0.85rem;
+    }
+
+    .guide-card-bottom {
+        gap: 10px;
+    }
+
+}
