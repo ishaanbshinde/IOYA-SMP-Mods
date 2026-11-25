@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================================================
 
     const GITHUB_BASE =
-        "https://raw.githubusercontent.com/ishaanbshinde/IOYA-SMP-Mods/main/3rd%20IOYA%20mods%20portal/mods/";
+        "https://raw.githubusercontent.com/ishaanbshinde/IOYA-SMP-Mods/main/mods/";
 
     const mods = [
+
         // PERFORMANCE
         { id: "badoptimizations", name: "Bad Optimizations", filename: "BadOptimizations-2.4.1-26.3-fabric.jar", category: "performance", description: "Fixes inefficient game code.", recommended: true },
         { id: "dynamicfps", name: "Dynamic FPS", filename: "dynamic-fps-3.11.10+minecraft-26.3.0-fabric.jar", category: "performance", description: "Reduces resource usage when Minecraft is inactive.", recommended: true },
@@ -22,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "moreculling", name: "More Culling", filename: "moreculling-fabric-26.3-1.9.2.jar", category: "performance", description: "Avoids rendering unnecessary objects.", recommended: true },
         { id: "sodium", name: "Sodium", filename: "sodium-fabric-0.9.3+mc26.3.jar", category: "performance", description: "Major rendering optimization.", recommended: true },
         { id: "sodiumextra", name: "Sodium Extra", filename: "sodium-extra-fabric-0.9.6+mc26.3.jar", category: "performance", description: "Extra Sodium settings.", recommended: true },
+        { id: "reesesoptions", name: "Reese's Sodium Options", filename: "reeses-sodium-options-fabric-2.2.6+26.3.jar", category: "performance", description: "Improves the Sodium video settings interface.", recommended: true },
 
         // VISUAL
-        { id: "etf", name: "Entity Texture Features", filename: "entity_texture_features-7.2.7-26.3-fabric.jar", category: "visual", description: "Enhanced entity texture support.", recommended: false },
+        { id: "etf", name: "Entity Texture Features", filename: "entity_texture_features-7.2.7-26.3-fabric.jar", category: "visual", description: "Enhanced entity texture support.", recommended: true },
         { id: "skinlayers", name: "3D Skin Layers", filename: "skinlayers3d-fabric-1.11.4-mc26.3.jar", category: "visual", description: "Renders player skin layers in 3D.", recommended: false },
 
         // HUD
@@ -39,12 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "fabriclanguagekotlin", name: "Fabric Language Kotlin", filename: "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar", category: "utility", description: "Kotlin mod support.", recommended: true },
         { id: "jei", name: "JEI", filename: "jei-26.3-fabric-31.14.0.72.jar", category: "utility", description: "Item and recipe viewer.", recommended: true },
         { id: "mezzconfig", name: "Mezz Config", filename: "mezz_config-26.3-fabric-0.7.1.jar", category: "utility", description: "Configuration support.", recommended: false },
-        { id: "modtogglemenu", name: "Mod Toggle Menu", filename: "mod-toggle-menu-mc26.3.jar", category: "utility", description: "Quickly enable or disable mods.", recommended: false },
+        { id: "modtogglemenu", name: "Mod Toggle Menu", filename: "mod-toggle-menu-mc26.3.jar", category: "utility", description: "Manage mod activation through a menu.", recommended: false },
         { id: "voicechat", name: "Simple Voice Chat", filename: "voicechat-fabric-2.6.27+26.3.jar", category: "utility", description: "Proximity voice chat.", recommended: false },
-        { id: "yaclib", name: "YACL", filename: "yet_another_config_lib_v3-3.9.7+26.3-fabric.jar", category: "utility", description: "Configuration library.", recommended: true },
+        { id: "yaclib", name: "YACL", filename: "yet_another_config_lib_v3-3.9.7+26.3-fabric.jar", category: "utility", description: "Configuration library.", recommended: true }
 
-        // CONFIGURATION
-        { id: "reesesoptions", name: "Reese's Sodium Options", filename: "reeses-sodium-options-fabric-2.2.6+26.3.jar", category: "utility", description: "Additional options for Sodium.", recommended: true }
     ];
 
     // ============================================================
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                     <p class="mod-description">
-                ${escapeHTML(mod.description)}
+                        ${escapeHTML(mod.description)}
                     </p>
 
                     <div class="mod-card-bottom">
@@ -336,7 +336,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (buildingZIP) return;
 
-        // JSZip availability check
         if (typeof JSZip === "undefined") {
             setInstallStatus(
                 "ZIP library unavailable. Check that JSZip is loaded in your HTML."
@@ -369,6 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const failed = [];
 
         try {
+
             // --------------------------------------------------------
             // FETCH MODS
             // --------------------------------------------------------
