@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "moreculling", name: "More Culling", filename: "moreculling-fabric-26.3-1.9.2.jar", category: "performance", description: "Avoids rendering unnecessary objects.", recommended: true },
         { id: "sodium", name: "Sodium", filename: "sodium-fabric-0.9.3+mc26.3.jar", category: "performance", description: "Major rendering optimization.", recommended: true },
         { id: "sodiumextra", name: "Sodium Extra", filename: "sodium-extra-fabric-0.9.6+mc26.3.jar", category: "performance", description: "Extra Sodium settings.", recommended: true },
-        { id: "reesesoptions", name: "Reese's Sodium Options", filename: "reeses-sodium-options-fabric-2.2.6+26.3.jar", category: "performance", description: "Improves the Sodium video settings interface.", recommended: true },
 
         // VISUAL
         { id: "etf", name: "Entity Texture Features", filename: "entity_texture_features-7.2.7-26.3-fabric.jar", category: "visual", description: "Enhanced entity texture support.", recommended: true },
@@ -369,9 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
 
-            // --------------------------------------------------------
             // FETCH MODS
-            // --------------------------------------------------------
 
             for (let i = 0; i < chosenMods.length; i++) {
                 const mod = chosenMods[i];
@@ -411,9 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
 
-            // --------------------------------------------------------
             // STOP IF DOWNLOADS FAILED
-            // --------------------------------------------------------
 
             if (failed.length > 0) {
                 setInstallStatus(
@@ -435,9 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // --------------------------------------------------------
             // GENERATE ZIP
-            // --------------------------------------------------------
 
             setInstallStatus("All mods downloaded. Compressing ZIP...");
             setProgress(75);
@@ -457,9 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
 
-            // --------------------------------------------------------
             // DOWNLOAD ZIP
-            // --------------------------------------------------------
 
             const downloadURL = URL.createObjectURL(zipBlob);
             const link = document.createElement("a");
