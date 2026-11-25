@@ -8,62 +8,43 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================================================
 
     const GITHUB_BASE =
-        "https://raw.githubusercontent.com/ishaanbshinde/IOYA-SMP-Mods/main/";
+        "https://raw.githubusercontent.com/ishaanbshinde/IOYA-SMP-Mods/main/3rd%20IOYA%20mods%20portal/mods/";
 
     const mods = [
         // PERFORMANCE
-        { id: "afterburner", name: "Afterburner", filename: "afterburner-0.3.9+26.3-fabric.jar", category: "performance", description: "Additional performance optimization.", recommended: false },
         { id: "badoptimizations", name: "Bad Optimizations", filename: "BadOptimizations-2.4.1-26.3-fabric.jar", category: "performance", description: "Fixes inefficient game code.", recommended: true },
-        { id: "c2me", name: "C2ME", filename: "c2me-fabric-mc26.3-0.4.2-alpha.0.88.jar", category: "performance", description: "Optimizes chunk loading and generation.", recommended: true },
         { id: "dynamicfps", name: "Dynamic FPS", filename: "dynamic-fps-3.11.10+minecraft-26.3.0-fabric.jar", category: "performance", description: "Reduces resource usage when Minecraft is inactive.", recommended: true },
-        { id: "entityculling", name: "Entity Culling", filename: "entityculling-fabric-1.12.1-mc26.3.jar", category: "performance", description: "Stops rendering hidden entities.", recommended: true },
+        { id: "entityculling", name: "Entity Culling", filename: "entityculling-fabric-1.12.2-mc26.3.jar", category: "performance", description: "Stops rendering hidden entities.", recommended: true },
         { id: "ferritecore", name: "FerriteCore", filename: "ferritecore-9.0.0-fabric.jar", category: "performance", description: "Reduces memory usage.", recommended: true },
         { id: "immediatelyfast", name: "ImmediatelyFast", filename: "ImmediatelyFast-Fabric-1.17.1+26.3.jar", category: "performance", description: "Optimizes rendering.", recommended: true },
         { id: "krypton", name: "Krypton", filename: "krypton-0.3.2.jar", category: "performance", description: "Optimizes networking.", recommended: true },
         { id: "lithium", name: "Lithium", filename: "lithium-fabric-0.26.4+mc26.3.jar", category: "performance", description: "Improves game logic performance.", recommended: true },
-        { id: "modernfix", name: "ModernFix", filename: "modernfix-5.27.20-build.2.jar", category: "performance", description: "Improves performance and memory efficiency.", recommended: true },
-        { id: "moreculling", name: "More Culling", filename: "moreculling-fabric-26.3-1.9.1.jar", category: "performance", description: "Avoids rendering unnecessary objects.", recommended: true },
+        { id: "moreculling", name: "More Culling", filename: "moreculling-fabric-26.3-1.9.2.jar", category: "performance", description: "Avoids rendering unnecessary objects.", recommended: true },
         { id: "sodium", name: "Sodium", filename: "sodium-fabric-0.9.3+mc26.3.jar", category: "performance", description: "Major rendering optimization.", recommended: true },
         { id: "sodiumextra", name: "Sodium Extra", filename: "sodium-extra-fabric-0.9.6+mc26.3.jar", category: "performance", description: "Extra Sodium settings.", recommended: true },
 
         // VISUAL
-        { id: "continuity", name: "Continuity", filename: "continuity-3.0.1+26.3.jar", category: "visual", description: "Connected textures support.", recommended: true },
         { id: "etf", name: "Entity Texture Features", filename: "entity_texture_features-7.2.7-26.3-fabric.jar", category: "visual", description: "Enhanced entity texture support.", recommended: false },
-        { id: "iris", name: "Iris Shaders", filename: "iris-fabric-1.11.7+mc26.3.jar", category: "visual", description: "Shader support for Minecraft.", recommended: false },
         { id: "skinlayers", name: "3D Skin Layers", filename: "skinlayers3d-fabric-1.11.4-mc26.3.jar", category: "visual", description: "Renders player skin layers in 3D.", recommended: false },
 
         // HUD
         { id: "appleskin", name: "AppleSkin", filename: "appleskin-fabric-mc26.3-3.0.10.jar", category: "hud", description: "Food and saturation information.", recommended: true },
+        { id: "armourdurability", name: "Armour Durability", filename: "armour-durability-1.11.26+mc26.3.jar", category: "hud", description: "Displays armour durability information.", recommended: true },
         { id: "bettermounthud", name: "Better Mount HUD", filename: "bettermounthud-1.3.1.jar", category: "hud", description: "Improved riding HUD.", recommended: false },
-        { id: "chatheads", name: "Chat Heads", filename: "chat_heads-1.3.2-fabric-26.3.jar", category: "hud", description: "Player heads in chat.", recommended: true },
-        { id: "jade", name: "Jade", filename: "Jade-mc26.3-Fabric-26.3.5.jar", category: "hud", description: "Information about blocks and entities.", recommended: true },
-        { id: "shulkerboxtooltip", name: "Shulker Box Tooltip", filename: "shulkerboxtooltip-fabric-5.4.3+26.3.jar", category: "hud", description: "Preview shulker box contents.", recommended: true },
-        { id: "statuseffectbars", name: "Status Effect Bars", filename: "status-effect-bars-1.0.12.jar", category: "hud", description: "Visual duration bars for status effects.", recommended: false },
+        { id: "chatheads", name: "Chat Heads", filename: "chat_heads-1.3.3-fabric-26.3.jar", category: "hud", description: "Player heads in chat.", recommended: true },
 
         // UTILITY
-        { id: "clothconfig", name: "Cloth Config", filename: "cloth-config-fabric-26.3.159.jar", category: "utility", description: "Configuration library.", recommended: true },
-        { id: "controlling", name: "Controlling", filename: "Controlling-fabric-26.3-26.3.4.jar", category: "utility", description: "Adds search to controls.", recommended: false },
+        { id: "clothconfig", name: "Cloth Config", filename: "cloth-config-fabric-26.3.161.jar", category: "utility", description: "Configuration library.", recommended: true },
         { id: "fabricapi", name: "Fabric API", filename: "fabric-api-0.166.2+26.3.jar", category: "utility", description: "Core Fabric modding API.", recommended: true },
         { id: "fabriclanguagekotlin", name: "Fabric Language Kotlin", filename: "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar", category: "utility", description: "Kotlin mod support.", recommended: true },
-        { id: "hotwire", name: "Hotwire", filename: "hotwire-0.9.5.3-beta+mc26.1-26.3.jar", category: "utility", description: "Utility mod.", recommended: false },
         { id: "jei", name: "JEI", filename: "jei-26.3-fabric-31.14.0.72.jar", category: "utility", description: "Item and recipe viewer.", recommended: true },
-        { id: "litematica", name: "Litematica", filename: "litematica-fabric-26.3-0.29.1.jar", category: "utility", description: "Schematic building tool.", recommended: false },
-        { id: "malilib", name: "MaLiLib", filename: "malilib-fabric-26.3-0.30.2.jar", category: "utility", description: "Library for Litematica.", recommended: false },
         { id: "mezzconfig", name: "Mezz Config", filename: "mezz_config-26.3-fabric-0.7.1.jar", category: "utility", description: "Configuration support.", recommended: false },
-        { id: "modmenu", name: "Mod Menu", filename: "modmenu-21.0.1.jar", category: "utility", description: "View and configure installed mods.", recommended: true },
-        { id: "naturescompass", name: "Nature's Compass", filename: "NaturesCompass-26.3-2.5.1-fabric.jar", category: "utility", description: "Locate biomes.", recommended: false },
-        { id: "placeholderapi", name: "Placeholder API", filename: "placeholder-api-3.2.0+26.3.jar", category: "utility", description: "Placeholder support library.", recommended: false },
-        { id: "searchables", name: "Searchables", filename: "Searchables-fabric-26.3-1.0.3.jar", category: "utility", description: "Search support for interfaces.", recommended: false },
-        { id: "simplemodmanager", name: "Simple Mod Manager", filename: "simple-mod-manager-1.6.2.jar", category: "utility", description: "Mod management utility.", recommended: false },
+        { id: "modtogglemenu", name: "Mod Toggle Menu", filename: "mod-toggle-menu-mc26.3.jar", category: "utility", description: "Quickly enable or disable mods.", recommended: false },
         { id: "voicechat", name: "Simple Voice Chat", filename: "voicechat-fabric-2.6.27+26.3.jar", category: "utility", description: "Proximity voice chat.", recommended: false },
-        { id: "worldeditcui", name: "WorldEdit CUI", filename: "WorldEditCUI-26.3+01.jar", category: "utility", description: "WorldEdit selection visualization.", recommended: false },
-        { id: "worldedit", name: "WorldEdit", filename: "worldedit-mod-7.4.6.jar", category: "utility", description: "World editing tools.", recommended: false },
         { id: "yaclib", name: "YACL", filename: "yet_another_config_lib_v3-3.9.7+26.3-fabric.jar", category: "utility", description: "Configuration library.", recommended: true },
 
-        // GAMEPLAY
-        { id: "bbe", name: "BBE", filename: "bbe-fabric-1.4.1+mc26.3-mod.jar", category: "gameplay", description: "Gameplay enhancement.", recommended: false },
-        { id: "xaerominimap", name: "Xaero's Minimap", filename: "xaerominimap-fabric-26.3-26.6.2.jar", category: "gameplay", description: "Minimap and navigation.", recommended: true },
-        { id: "xaeroworldmap", name: "Xaero's World Map", filename: "xaeroworldmap-fabric-26.3-1.47.2.jar", category: "gameplay", description: "World map.", recommended: true }
+        // CONFIGURATION
+        { id: "reesesoptions", name: "Reese's Sodium Options", filename: "reeses-sodium-options-fabric-2.2.6+26.3.jar", category: "utility", description: "Additional options for Sodium.", recommended: true }
     ];
 
     // ============================================================
@@ -79,9 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const libraryModCount = document.getElementById("libraryModCount");
 
     const selectRecommended = document.getElementById("selectRecommended");
-    const selectAll = document.getElementElementById
-        ? document.getElementElementById("selectAll")
-        : document.getElementById("selectAll");
+    const selectAll = document.getElementById("selectAll");
 
     const clearSelection = document.getElementById("clearSelection");
     const downloadSelected = document.getElementById("downloadSelected");
